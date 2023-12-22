@@ -1,12 +1,9 @@
 ---
-- hosts: win 
 
-  tasks: 
+- hosts: all 
 
-   - name: Stop service Tomcat
+  tasks:
 
-     win_service:
+   - name: commande_test
 
-       name: Tomcat8
-
-       state: stopped
+     win_command: whoami.exe
